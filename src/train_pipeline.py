@@ -103,8 +103,7 @@ def main():
         )
         pipeline, train_m, test_m = trainer.train()
 
-        preds_log = pipeline.predict(X_test)
-        preds = np.expm1(preds_log)
+        preds = pipeline.predict(X_test)
         y_true = np.expm1(y_test)
 
         metrics = {
