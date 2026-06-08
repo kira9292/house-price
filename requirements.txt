@@ -1,0 +1,17 @@
+dill==0.4.0
+pytest>=8.0
+loguru==0.7.3
+missingno==0.5.2
+mlflow==3.1.1
+numpy==1.26.4
+optuna==4.4.0
+pandas==2.3.0
+pendulum==3.1.0
+plotly==5.22.0
+scikit_learn==1.7.0
+seaborn==0.13.2
+setuptools==78.1.1
+xgboost==1.7.6
+ydata-profiling==4.18.4 #fg-data-profiling 
+yellowbrick==1.5
+ 
