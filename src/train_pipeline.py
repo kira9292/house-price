@@ -5,6 +5,8 @@ import sys
 import warnings
 from pathlib import Path
 
+import os
+
 import dill
 import mlflow
 import numpy as np
@@ -78,6 +80,7 @@ def main():
     best_params = {"alpha": 10.0}  # à remplacer après notebook 03
 
     # ── Entraînement ────────────────────────────────────────────────────────
+    os.environ.setdefault("MLFLOW_ALLOW_FILE_STORE", "true")
     mlflow.set_tracking_uri(str(Path(PROJECT_DIR, "notebooks", "mlruns")))
     mlflow.set_experiment("house_price_train_pipeline")
 
