@@ -16,7 +16,9 @@ build/
 # Data & models (trop lourds pour git)
 data/input/
 data/output/
-reports/
+
+# Reports : on versionne les PNG, pas le HTML lourd
+reports/*.html
 
 # MLFlow
 notebooks/mlruns/
@@ -31,3 +33,4 @@ notebooks/mlruns/
 # IDE
 .idea/
 .vscode/
+/.claude/
