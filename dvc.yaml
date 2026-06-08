@@ -1,0 +1,25 @@
+stages:
+
+  load_data:
+    cmd: python src/make_dataset.py
+    deps:
+      - src/make_dataset.py
+      - settings/params.py
+    outs:
+      - data/output/house_prices.parquet
+
+  train:
+    cmd: python src/train_pipeline.py
+    deps:
+      - src/train_pipeline.py
+      - src/trainer.py
+      - settings/params.py
+      - data/output/house_prices.parquet
+    outs:
+      - models/
+    metrics:
+      - metrics.json:
+          cache: false
+    plots:
+      - reports/feature_importances_best.png
+      - reports/residuals_best.png
