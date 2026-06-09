@@ -17,11 +17,20 @@ build/
 data/input/
 data/output/
 
+# Modèles sérialisés — gérés par DVC
+models/*.dill
+
 # Reports : on versionne les PNG, pas le HTML lourd
 reports/*.html
 
 # MLFlow
 notebooks/mlruns/
+
+# Artefacts CatBoost
+notebooks/catboost_info/
+
+# Ancien notebook (remplacé par house_price_0*.ipynb)
+notebooks/01-exploration-modeling.ipynb
 
 # Env
 .env
